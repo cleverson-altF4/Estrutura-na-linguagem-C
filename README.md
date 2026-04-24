@@ -1,6 +1,6 @@
 # Estrutura-na-linguagem-C
 
-🚁 PROJETO: CONSTRUINDO UM DRONE EM C (SIMULAÇÃO)
+🚁 PROJETO: CONSTRUINDO UM DRONE EM C 
 
 Hoje vamos aprender:
 
@@ -24,13 +24,13 @@ Nível da bateria
 Estado (ligado/desligado)
 Direção
 Coordenadas
-🧠 Tipos primitivos no contexto do drone
+Tipos primitivos no contexto do drone
 Tipo	Usaremos para
 int	Altura em metros
 float	Velocidade, temperatura
 double	Cálculos mais precisos
 char	Estado do drone ('L' ligado, 'D' desligado)
-🟢 EXPLICAÇÃO RÁPIDA
+EXPLICAÇÃO RÁPIDA
 🔹 int
 
 Números inteiros.
@@ -51,3 +51,21 @@ Um caractere.
 Ex: modo = 'A' (automático)
 
 ---------------------------------------------------------------------------------
+
+Operadores + Controle de Decisão
+
+Agora você aprende:
+
+if
+else
+switch
+operadores lógicos (&&, ||, !)
+comparações
+
+💡 Isso permite que o drone tome decisões sozinho.
+
+Exemplo mental:
+
+Se bateria < 20% → voltar para base
+Se temperatura > limite → desligar motor
+Se altitude > limite → parar subida
