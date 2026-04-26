@@ -69,3 +69,20 @@ Exemplo mental:
 Se bateria < 20% → voltar para base
 Se temperatura > limite → desligar motor
 Se altitude > limite → parar subida
+
+-------------------------------------------------------
+CONTROLE DE DECISÃO (if / else)
+Tema: O Drone Começa a Pensar
+
+Você já sabe guardar informações.
+Agora o drone precisa tomar decisões sozinho.
+
+Objetivo da Aula
+
+Aprender:
+
+if
+else
+else if
+Operadores relacionais (>, <, >=, <=, ==)
+Operadores lógicos (&&, ||)
