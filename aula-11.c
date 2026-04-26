@@ -7,11 +7,13 @@ int main(){
     while (ciclo < 8){
         altitude = altitude + 0.5; //Ganha meio metro
 
+        printf("\nCiclo %d | altitude %fm | ", ciclo, altitude);
+
         if (altitude < 3.0) {
             printf("Subindo...\n");
 
         } else if (altitude <= 4) {
-            printf("Altitude alvo!\n");
+            printf("Altitude alvo! (limite máximo) \n");
 
         } else {
             printf("Descendo...\n");
