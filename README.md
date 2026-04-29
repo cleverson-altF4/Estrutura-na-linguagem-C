@@ -86,3 +86,13 @@ else
 else if
 Operadores relacionais (>, <, >=, <=, ==)
 Operadores lógicos (&&, ||)
+
+
+--------------------------------------------------------
+
+Aula de hoje:
+
+✅ for loop
+✅ Arrays — os 4 motores numa lista só
+✅ Funções em C
+✅ const e #define
