@@ -269,19 +269,22 @@ Uso: Úteis para configurações gerais ou estados que todo o programa precisa c
 
 
 
-
+### Exemplo de Variáveis Locais e Globais em C
+```c
 #include <stdio.h>
 
-int g = 10; // VARIÁVEL GLOBAL
+int g = 10; // VARIÁVEL GLOBAL - Acessível em todo o programa
 
 void funcao() {
-    int l = 5; // VARIÁVEL LOCAL
+    int l = 5; // VARIÁVEL LOCAL - Existe apenas dentro desta função
     printf("Local: %d, Global: %d\n", l, g);
 }
 
 int main() {
     funcao();
-    // printf("%d", l); // ERRO! main não conhece a variável 'l'
-    printf("Global na main: %d\n", g); // OK! 'g' é pública
+    
+    // printf("%d", l); // ERRO! A main não conhece a variável 'l'
+    
+    printf("Global na main: %d\n", g); // OK! 'g' é pública e visível aqui
     return 0;
 }
