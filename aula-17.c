@@ -1,5 +1,8 @@
 #include <stdio.h>
 
+
+//Variáveis globais
+
 void decolar(){ //Função sem parâmetro
     printf("Decolando!\n");  
 }
@@ -20,7 +23,7 @@ float calcular_diferenca(float atual, float alvo){
 }
 
 
-//Programa principal
+//Programa principal  - Locais
 int main(){
     decolar(); // Função sem parâmetro e sem retorno
     exibir_altitude(3.5); //função com parâmetro e sem retorno
