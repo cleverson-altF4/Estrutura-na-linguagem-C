@@ -1,21 +1,32 @@
 # Estrutura-na-linguagem-C
 
-🚁 PROJETO: CONSTRUINDO UM DRONE EM C 
+```C
+#include <stdio.h>
 
-Hoje vamos aprender:
+int main() {
+    int altitude = 0;
+    int altitude_ligado = 10;
+    float velocidade = 0.0;
+    float velocidade_ligado = 6.5;
+    float bateria = 100.0;
+    float bateria_ligado = 60.6;
+    char estado = 'D';
+    char estado_ligado = 'L';
 
-🟢 VARIÁVEIS E TIPOS PRIMITIVOS
+    printf("\n Drone desligado \n");
+    printf("Altitude : %d metros [Desligado] \n", altitude);
+    printf("Velocidade: %.1f m/s [Desligado] \n", velocidade);
+    printf("Bateria: %.1f%% [Carregado] \n", bateria);
+    printf("Estado: %c [Desligado] \n", estado);
 
-Mas pensando como um sistema de controle de drone real.
+    printf("\n Drone ligado\n");
+    printf("Altitude: %d metros [Ligado]\n", altitude_ligado);
+    printf("Velocidade: %.1f [Ligado]\n", velocidade_ligado);
+    printf("Bateria: %.1f%% [descarregando]\n", bateria_ligado);
+    printf("Estado: %c [Ligado]\n", estado_ligado);
 
-🎯 MISSÃO 1 — Entender o que são variáveis no contexto do drone
-📌 Conceito direto ao ponto
-
-Uma variável é:
-
-Um espaço na memória que guarda um valor que pode mudar.
-
-No drone, precisamos guardar:
+    return 0;
+}
 
 Altura
 Velocidade
@@ -70,7 +81,41 @@ Se bateria < 20% → voltar para base
 Se temperatura > limite → desligar motor
 Se altitude > limite → parar subida
 
--------------------------------------------------------
+```C
+#include <stdio.h>
+
+int main(){
+    float bateria = 15.5;
+    float temperatura = 55.0;
+    printf("\nBateria do drone\n");
+    if (bateria < 20)
+    {
+        
+        printf("Bateria baixa! pousar imediatamente!\n");
+    
+    } else {
+        printf("Bateria em nível seguro.\n");
+    }
+
+    printf("\nTemperatura do Drone\n");
+
+    if (temperatura > 60)
+    {
+        
+        printf("Superaquecimento! desligando o motor. \n");
+    } else if (temperatura > 50)
+    {
+        printf("Temperatura alta! Reduzindo a potência\n");
+
+    } else{
+        printf("Temperatura normal\n");
+    }
+    
+    
+    return 0;
+}
+
+
 CONTROLE DE DECISÃO (if / else)
 Tema: O Drone Começa a Pensar
 
@@ -87,87 +132,134 @@ else if
 Operadores relacionais (>, <, >=, <=, ==)
 Operadores lógicos (&&, ||)
 
+```C
+#include <stdio.h>
+
+int main(){
+    float bateria;
+    float temperatura;
+
+    printf("Sistema inteligente\n");
+    printf("Digite o nível da bateria: ");
+    scanf("%f", &bateria);
+
+    printf("Digite a temperatura: ");
+    scanf("%f", &temperatura);
+
+    if (bateria < 20 || temperatura > 60)
+    {
+        printf("Pouso forçado");
+    } else {
+        printf("Pode continuar o voo");
+    }
+    
+    return 0;
+}
+
 
 --------------------------------------------------------
-For Loop em C
 
-O for é uma estrutura de repetição usada quando sabemos quantas vezes um bloco de código deve ser executado.
+O laço while em C é uma estrutura de controle de fluxo usada para repetir um bloco de código enquanto uma condição específica for verdadeira.
 
-Ele é muito utilizado para contagens, percorrer vetores e repetir instruções de forma controlada.
+Aqui está o essencial para você dominar o while:
 
-🔹 Estrutura do for
-for (inicialização; condição; incremento) {
-    // bloco de código
+1. Sintaxe Básica
+A estrutura é muito simples. A condição é verificada antes de cada execução do bloco de código.
+
+C
+while (condição) {
+    // Código que será repetido
 }
-📖 Explicando cada parte:
-Inicialização → Executada uma única vez no início do loop.
-Condição → Enquanto for verdadeira, o loop continua.
-Incremento/Decremento → Atualiza a variável de controle a cada repetição.
-🔹 Exemplo Básico
+Condição: Se for verdadeira (qualquer valor diferente de 0), o bloco executa.
+
+Corpo: Onde o código "mora". Se a condição for falsa logo de cara, o código lá dentro nunca é executado.
+
+2. Exemplo Prático: Contador
+Para usar um while corretamente, você geralmente precisa de três coisas: inicializar uma variável, testar a condição e atualizar essa variável.
+
+C
 #include <stdio.h>
 
 int main() {
+    int i = 1; // 1. Inicialização
 
-    for (int i = 1; i <= 5; i++) {
-        printf("%d\n", i);
+    while (i <= 5) { // 2. Condição
+        printf("Contagem: %d\n", i);
+        
+        i++; // 3. Atualização (evita o loop infinito)
     }
 
     return 0;
 }
-🧠 O que acontece?
-i começa valendo 1
-O programa verifica se i <= 5
-Executa o bloco
-Incrementa i
-Repete até a condição ser falsa
+3. O Perigo do Loop Infinito
+Se você esquecer de atualizar a variável (o i++ no exemplo acima) ou se a condição nunca se tornar falsa, o programa ficará rodando para sempre, travando a execução.
 
-Saída:
+4. Diferença entre while e do-while
+É comum confundir os dois, mas a regra é simples:
 
-1
-2
-3
-4
-5
+while: Pensa antes de agir. Avalia a condição primeiro. Se for falsa, não faz nada.
 
+do-while: Age antes de pensar. Executa o código pelo menos uma vez e só depois checa a condição para decidir se continua.
 
-🔹 Loop Decrescente
-for (int i = 10; i >= 0; i--) {
-    printf("%d ", i);
+Exemplo de do-while:
+
+C
+int j = 10;
+do {
+    printf("Isso imprime uma vez mesmo sendo falso!\n");
+} while (j < 5);
+
+--------------------------------------------------------
+O laço for em C é a estrutura de repetição preferida quando você já sabe exatamente quantas vezes quer que o código seja executado. Ele é mais compacto que o while porque agrupa a inicialização, a condição e o incremento em uma única linha.
+
+1. Estrutura do for
+A sintaxe segue este padrão:
+
+C
+for (inicialização; condição; incremento) {
+    // Código a ser repetido
 }
+Inicialização: Executada apenas uma vez, no início (ex: int i = 0).
 
+Condição: Testada antes de cada repetição. Se for falsa, o laço para.
 
-🔹 Incremento Diferente
-for (int i = 0; i <= 10; i += 2) {
-    printf("%d ", i);
+Incremento/Atualização: Executado ao final de cada repetição (ex: i++).
+
+C
+#include <stdio.h>
+
+int main() {
+    //   (1)      (2)     (3)
+    for (int i = 1; i <= 5; i++) {
+        printf("Número: %d\n", i);
+    }
+    return 0;
 }
+3. Comparativo: for vs while
+Ambos podem fazer as mesmas coisas, mas o for organiza melhor o código quando há um contador envolvido.
 
+Com while:
 
-
-Conta de 2 em 2.
-
-🔹 For Infinito
-for (;;) {
-    printf("Loop infinito\n");
+C
+int i = 0; // Inicialização fora
+while (i < 10) {
+    // código
+    i++; // Incremento "escondido" no fim
 }
+Com for:
 
-Cuidado: precisa de um break para parar.
-
-🔹 Usando break e continue
-break → interrompe o loop
-continue → pula para a próxima repetição
-
-Exemplo:
-
+C
+// Tudo em uma linha só: organizado e difícil de esquecer o incremento
 for (int i = 0; i < 10; i++) {
-    if (i == 5) break;
-    printf("%d ", i);
+    // código
 }
+4. Dicas Avançadas
+Loop Infinito: Se você deixar os campos vazios for(;;), o loop nunca para.
 
+Múltiplas Variáveis: Você pode inicializar mais de uma variável: for(int i=0, j=10; i < j; i++, j--).
 
-🎯 Quando usar for?
-Quando souber o número de repetições
-Para percorrer arrays
-Para contagens crescentes ou decrescentes
+Decremento: Também funciona para contagem regressiva: for(int i=10; i > 0; i--).
+
 
 ----------------------------------------------------------
 
@@ -231,16 +323,57 @@ Isso informa ao compilador que a função existe.
 
 Em C, podemos ter:
 
-✅ Função com parâmetros e com retorno
-✅ Função com parâmetros e sem retorno
-✅ Função sem parâmetros e com retorno
-✅ Função sem parâmetros e sem retorno
+Função com parâmetros e com retorno
+Função com parâmetros e sem retorno
+Função sem parâmetros e com retorno
+Função sem parâmetros e sem retorno
 🔹 Variáveis Locais
 
 Variáveis criadas dentro da função:
 
 Só existem dentro dela
 Não podem ser acessadas fora
+
+```C
+#include <stdio.h>
+
+//Variáveis globais
+
+void decolar(){ //Função sem parâmetro
+    printf("Decolando!\n");  
+}
+
+void exibir_altitude(float altitude){ //Função com parâmetro sem retorno
+    printf("Altitude atual: %.1fm\n", altitude);
+
+}
+
+int ler_bateria(){ //Função sem parâmetro com retorno, lembrando que não inicia com VOID e sim com um INT e devolve ele em inteiro
+    int bateria = 80;
+    return bateria;
+}
+
+float calcular_diferenca(float atual, float alvo){
+    float diferenca = alvo - atual;
+    return diferenca;
+}
+
+
+//Programa principal  - Locais
+int main(){
+    decolar(); // Função sem parâmetro e sem retorno
+    exibir_altitude(3.5); //função com parâmetro e sem retorno
+
+    int nivel = ler_bateria(); //Função sem VOID e sim INT sem parâmetro porém com retorno
+    printf("Bateria: %d%%\n", nivel);
+
+    float diferenca = calcular_diferenca(1.5, 4.0); //função com FLOAT e com parâmetro e com retorno
+    printf("A diferença para o alvo: %.1fm\n", diferenca);
+
+    return 0;
+
+}
+
 
 -----------------------------------------------------------
 

@@ -1,6 +1,5 @@
 #include <stdio.h>
 
-
 //Variáveis globais
 
 void decolar(){ //Função sem parâmetro
