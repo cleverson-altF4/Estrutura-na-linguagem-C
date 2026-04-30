@@ -421,3 +421,16 @@ int main() {
     printf("Global na main: %d\n", g); // OK! 'g' é pública e visível aqui
     return 0;
 }
+
+
+-----------------------------------------------------------------------------------
+
+O modificador const em C é usado para criar variáveis cujos valores não podem ser alterados após a inicialização. Pense nele como uma promessa de que aquele valor será apenas para leitura (read-only).
+
+1. Como declarar
+Basta colocar a palavra const antes ou depois do tipo da variável:
+
+C
+const int LIMITE = 100;
+// LIMITE = 200; // ERRO! O compilador não permite.
+Dica: É uma convenção comum (embora não obrigatória) escrever nomes de constantes em MAIÚSCULAS para diferenciá-las visualmente das variáveis comuns.
