@@ -3,7 +3,7 @@
 #include <stdio.h>
 
 int main(){
-    int motores[4] = {30,75,50,90};
+    int motores[4] = {30,75,50,90}; //Array[4] = {parâmetros}
 
    for (int i = 0; i < 4; i++)
    {
