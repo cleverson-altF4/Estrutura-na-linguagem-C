@@ -241,3 +241,45 @@ Variáveis criadas dentro da função:
 
 Só existem dentro dela
 Não podem ser acessadas fora
+
+-----------------------------------------------------------
+
+1. Variáveis Locais
+São declaradas dentro de uma função ou de um bloco de código (entre chaves { }).
+
+Escopo: Só existem dentro da função onde foram criadas.
+
+Vida útil: São destruídas assim que a execução da função termina.
+
+Inicialização: Não possuem valor padrão. Se você não atribuir um valor, elas conterão "lixo de memória".
+
+Uso: Ideal para cálculos temporários e proteção de dados (uma função não mexe na variável da outra).
+
+
+2. Variáveis Globais
+São declaradas fora de todas as funções, geralmente no topo do arquivo.
+
+Escopo: Podem ser acessadas e modificadas por qualquer função do programa.
+
+Vida útil: Permanecem na memória durante todo o tempo em que o programa estiver rodando.
+
+Inicialização: São automaticamente inicializadas com zero (0) se você não definir um valor.
+
+Uso: Úteis para configurações gerais ou estados que todo o programa precisa conhecer.
+
+
+#include <stdio.h>
+
+int g = 10; // VARIÁVEL GLOBAL
+
+void funcao() {
+    int l = 5; // VARIÁVEL LOCAL
+    printf("Local: %d, Global: %d\n", l, g);
+}
+
+int main() {
+    funcao();
+    // printf("%d", l); // ERRO! main não conhece a variável 'l'
+    printf("Global na main: %d\n", g); // OK! 'g' é pública
+    return 0;
+}
