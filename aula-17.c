@@ -14,13 +14,22 @@ int ler_bateria(){ //Função sem parâmetro com retorno, lembrando que não ini
     return bateria;
 }
 
+float calcular_diferenca(float atual, float alvo){
+    float diferenca = alvo - atual;
+    return diferenca;
+}
 
+
+//Programa principal
 int main(){
-    decolar();
-    exibir_altitude(3.5);
+    decolar(); // Função sem parâmetro e sem retorno
+    exibir_altitude(3.5); //função com parâmetro e sem retorno
 
-    int nivel = ler_bateria();
-    printf("Bateria: %d%%", nivel);
+    int nivel = ler_bateria(); //Função sem VOID e sim INT sem parâmetro porém com retorno
+    printf("Bateria: %d%%\n", nivel);
+
+    float diferenca = calcular_diferenca(1.5, 4.0); //função com FLOAT e com parâmetro e com retorno
+    printf("A diferença para o alvo: %.1fm\n", diferenca);
 
     return 0;
 
