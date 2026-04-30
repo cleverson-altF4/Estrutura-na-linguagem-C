@@ -268,6 +268,8 @@ Inicialização: São automaticamente inicializadas com zero (0) se você não d
 Uso: Úteis para configurações gerais ou estados que todo o programa precisa conhecer.
 
 
+
+
 #include <stdio.h>
 
 int g = 10; // VARIÁVEL GLOBAL
