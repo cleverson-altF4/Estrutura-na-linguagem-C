@@ -502,6 +502,6 @@ cconst float GRAVIDADE = 9.8;  // tem tipo — float
 #define GRAVIDADE 9.8          // sem tipo — só substituição
 
 
-<img width="780" height="548" alt="Captura de tela de 2026-05-02 12-58-45" src="https://github.com/user-attachments/assets/8faaf68e-db92-4903-aabe-30d52f8ef562" />
+
 
 
