@@ -494,3 +494,11 @@ Adicione no seu arquivo:
 c#define MAX_ALTITUDE 100
 #define NUM_MOTORES 4
 #define GRAVIDADE 9.8
+
+-------------------------------------------------------------------
+
+O const é parecido com #define mas tem tipo declarado — é uma variável que não pode ser modificada:
+cconst float GRAVIDADE = 9.8;  // tem tipo — float
+#define GRAVIDADE 9.8          // sem tipo — só substituição
+
+
