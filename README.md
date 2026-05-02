@@ -502,6 +502,14 @@ cconst float GRAVIDADE = 9.8;  // tem tipo — float
 #define GRAVIDADE 9.8          // sem tipo — só substituição
 
 
+------------------------------------------------------------------------
 
+scanf — Recebendo dados do usuário
+Até agora todos os valores eram fixos no código. O scanf permite que o usuário digite valores durante a execução.
+No drone isso simula: o piloto digitando a altitude desejada, o tempo de voo, a potência dos motores.
+
+A estrutura é parecida com o printf:
+cscanf("%d", &variavel);
+O & é o endereço da variável — por agora não precisa entender fundo, só lembra que sempre coloca o & antes da variável no scanf.
 
 
