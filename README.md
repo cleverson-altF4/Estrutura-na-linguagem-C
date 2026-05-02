@@ -476,3 +476,21 @@ Dica: É uma convenção comum (embora não obrigatória) escrever nomes de cons
 - C: Leitura do sensor MPU-6050
 - C: Enviar dados via Serial
 - Python: Gráfico em tempo real com matplotlib
+
+
+--------------------------------------------------------------------------------
+
+#define
+O #define é uma substituição simples — antes de compilar o C troca o nome pelo valor em todo o código:
+c#define NOME_DA_CONSTANTE valor
+Características:
+
+Fica antes do main e fora de tudo
+Sem ; no final
+Nome em MAIÚSCULAS por convenção
+Sem tipo — só nome e valor
+
+Adicione no seu arquivo:
+c#define MAX_ALTITUDE 100
+#define NUM_MOTORES 4
+#define GRAVIDADE 9.8
