@@ -434,3 +434,45 @@ C
 const int LIMITE = 100;
 // LIMITE = 200; // ERRO! O compilador não permite.
 Dica: É uma convenção comum (embora não obrigatória) escrever nomes de constantes em MAIÚSCULAS para diferenciá-las visualmente das variáveis comuns.
+
+------------------------------------------------------------------------------
+
+
+# Progresso — Projeto Drone
+
+## Fase 1 — Concluída ✅
+
+### C
+- Variáveis: int, float, char ✅
+- if/else, else if ✅
+- while com condição dupla ✅
+- for loop com i++, i += 10 ✅
+- break ✅
+- printf com %d, %.2f, %c, %%, \n ✅ 
+- Arrays — declarar, acessar, modificar com for ✅
+- Funções:
+  - void f() — sem parâmetro, sem retorno ✅
+  - void f(param) — com parâmetro, sem retorno ✅
+  - int f() — sem parâmetro, com retorno ✅
+  - float f(param, param) — com parâmetro, com retorno ✅
+- Variáveis locais — nascem e morrem dentro da função ✅
+- Variáveis globais — todas as funções enxergam ✅
+- Desafio Final: sistema completo com array + funções + globais ✅
+
+### Python
+- Variáveis sem declarar tipo ✅
+- if/elif/else  ✅
+- Funções com def, parâmetros e valor padrão ✅
+- f-strings para formatar saída ✅
+- OpenCV: câmera ao vivo ✅
+- HUD com putText, cores, mira com cv2.line ✅
+
+## Próximo — Fechar Fase 1
+- C: const e #define 
+- C: scanf
+
+## Fase 2 — Hardware Real
+- C: Protocolo I2C
+- C: Leitura do sensor MPU-6050
+- C: Enviar dados via Serial
+- Python: Gráfico em tempo real com matplotlib
