@@ -114,3 +114,24 @@ void loop() {
 | `Serial.println("msg")` | Imprime mensagem no monitor |
 
 #### Pinos PWM do Arduino Uno
+
+
+#### Conceitos de Hardware
+- **Anodo (+)** → perna maior → pino do Arduino
+- **Catodo (-)** → perna menor → resistor → GND
+- **Resistor 220Ω** → protege o LED de queimar
+- **Protoboard** → linha GND compartilhada
+- **PWM** → liga/desliga rápido para simular velocidade variável
+
+#### Projetos Arduino Concluídos
+- ✅ Blink — LED piscando
+- ✅ Animação com 5 LEDs — ida e volta
+- ✅ PWM com 1 LED — brilho suave
+- ✅ PWM com 4 LEDs — simulação de 4 motores
+- ✅ Semáforo do drone — Serial Monitor
+
+---
+
+## ⏳ Próximos Passos
+
+### Fase 2 — Restante
